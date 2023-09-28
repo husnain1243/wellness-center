@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+
+</head>
+<body>
+    
+    <style>
+        h2,h3{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.6rem;
+            line-height: 1.1;
+            color: #fff;
+        }
+        h3{
+            font-size: 32px;
+        }
+        p{
+            font-family: 'EB Garamond', serif;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #9a948d;
+            text-align: center;
+        }
+        a{
+            font-family: "Josefin Sans";
+            font-size: 18px;
+            font-weight: 400;
+            line-height: inherit !important;
+        }
+        .center-text-menu{
+            font-family: "EB Garamond";
+            font-size: 48px;
+        }
+        .banner-slider-section h2{
+            margin-bottom: 50px !important;
+        }
+        .card-data{
+            top: 40%;
+        }
+        .manu-section{
+            z-index: 999;
+        }
+        .service-button-container{
+            width: 200px;
+        }
+        .service-button{
+            width: 210px;
+            margin-left: -10px;
+        }
+        .image-container img
+        {
+            transition: transform .5s;
+        }
+        .image-container img:hover{
+            transform: scale(1.2);
+        }
+        .service2-section p,
+        .special-offer-section .offer-para{
+            width: 45%;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .special-offer-section .card1{
+            min-height: 530px;
+            background: transparent;
+            z-index: 1;
+            margin-bottom: 50px;
+        }
+        .special-offer-section .card2{
+            min-height: 570px !important;
+            margin-top: -20px;
+        }
+        .special-offer-section .card-container{
+            position: relative;
+        }
+        .special-offer-section .card-container::before{
+            content: "";
+            left: 2%;
+            top: -1.5%;
+            position: absolute;
+            width: 96%;
+            height: 103%;
+            background: #0b0a08;
+        }
+        .special-offer-section .card1 p
+        {
+            font-size: 19px;
+            font-style: italic;
+            color: #9a948d !important;
+            font-family: 'Cormorant Garamond';
+        }
+        .special-offer-section .card1 span{
+            font-size: 70px;
+        }
+        .special-offer-section .card1 li{
+            color: #c0bcb7;
+            font-family: "EB Garamond";
+            font-size: 17px;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .special-offer-section .card-top{
+            margin-bottom: 100px;
+        }
+        .special-offer-section .card1 a
+        {
+            font-size: 19px;
+            color: #ba9b67 !important;
+            text-decoration: none;
+        }
+        .special-offer-section .card1 a:hover
+        {
+            text-decoration: underline;
+        }
+        footer .accordion-button::after{
+            background-image: none;
+            content: "+";
+            transform: none;
+            color: #fff;
+            font-size: 22px;
+        }
+        footer .accordion-button:not(.collapsed)::after{
+            background-image: none;
+            content: "-";
+            color: #fff;
+            transform: none;
+            font-size: 22px;    
+        }
+        footer h3{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            line-height: 1.1;
+            margin-bottom: 40px;
+        }
+        .master-team-section .master-image-container .master-image-data{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0b0a089c;
+            display: none;
+        }
+        .master-team-section .master-image-container:hover .master-image-data{
+            display: flex;
+        }
+        .master-team-section h3{
+            width: 40%;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            line-height: 1.1;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            text-align: start;
+        }
+            
+    </style>
+    <div class="wrapper">
+        
+        <header class="manu-section position-fixed top-0 bg-transparent w-100 py-2 border-bottom">
+            <div class="container">
+                <div class="menu-container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="d-flex justify-content-center gap-5 unlist-style list-unstyled m-0 align-items-center">
+                                <li><a class="text-decoration-none text-white" href="#">HOME</a></li>
+                                <li><a class="text-decoration-none text-white" href="#">TARIFF</a></li>
+                                <li><a class="text-decoration-none text-white center-text-menu" href="#">WELLNESS CENTER</a></li>
+                                <li><a class="text-decoration-none text-white" href="#">QUESTIONS</a></li>
+                                <li><a class="text-decoration-none text-white" href="#">MASTERS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="banner-slider-section">
+            <div class="container-fluid">
+                <div class="banner-slider-container">
+                    <div class="row">
+                        <div class="col-12 p-0">
+                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active position-relative">
+                                    <img src="asserts/banner1.jpg" class="d-block w-100" alt="banner1">
+                                    <div class="card-data position-absolute text-center start-0 end-0">
+                                        <h2 class="w-75 m-auto">GIVE YOURSELF PLEASURE AND CLOSE TO PEOPLE</h2>
+                                        <a href="#" class="border rounded-circle px-4 py-5 text-white text-decoration-none">View more</a>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="asserts/banner2.jpeg" class="d-block w-100" alt="banner2">
+                                    <div class="card-data position-absolute text-center start-0 end-0">
+                                        <h2 class="w-75 m-auto">GIVE YOURSELF PLEASURE AND CLOSE TO PEOPLE</h2>
+                                        <a href="#" class="border rounded-circle px-4 py-5 text-white text-decoration-none">View more</a>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="asserts/banner3.jpg" class="d-block w-100" alt="banner3">
+                                    <div class="card-data position-absolute text-center start-0 end-0">
+                                        <h2 class="w-75 m-auto">GIVE YOURSELF PLEASURE AND CLOSE TO PEOPLE</h2>
+                                        <a href="#" class="border rounded-circle px-4 py-5 text-white text-decoration-none">View more</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="service-section bg-dark py-4 py-lg-5">
+            <div class="container">
+                <div class="service-container">
+                    <div class="row">
+                        <div class="col-12 col-md-4 position-relative">
+                            <div class="image-container overflow-hidden">
+                                <img src="asserts/service1.jpg" class="img-fluid m-auto d-block"/>
+                            </div>
+                            <div class="card-data text-center position-absolute start-0 end-0 text-white">
+                                <h3>SERVICE</h3>
+                                <div class="service-button-container border rounded m-auto p-1">
+                                    <a href="#" class="service-button d-block border text-white text-decoration-none py-1">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-4 position-relative">
+                            <div class="image-container overflow-hidden">
+                                <img src="asserts/service2.jpg" class="img-fluid m-auto d-block"/>
+                            </div>
+                            <div class="card-data text-center position-absolute start-0 end-0 text-white">
+                                <h3>SERVICE</h3>
+                                <div class="service-button-container border rounded m-auto p-1">
+                                    <a href="#" class="service-button d-block border text-white text-decoration-none py-1">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-4 position-relative">
+                            <div class="image-container overflow-hidden">
+                                <img src="asserts/service3.jpg" class="img-fluid m-auto d-block"/>
+                            </div>
+                            <div class="card-data text-center position-absolute start-0 end-0 text-white">
+                                <h3>SERVICE</h3>
+                                <div class="service-button-container border rounded m-auto p-1">
+                                    <a href="#" class="service-button d-block border text-white text-decoration-none py-1">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service2-section bg-dark py-4 py-lg-5">
+            <div class="container">
+                <div class="service2-container">
+                    <div class="row">
+                        <div class="col-12 mb-5">
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="image-container overflow-hidden">
+                                <img src="asserts/service21.jpg" alt="service21" class="m-auto d-block img-fluid"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="image-container overflow-hidden">
+                                <img src="asserts/service22.jpg" alt="service21" class="m-auto d-block img-fluid"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="image-container overflow-hidden">
+                                <img src="asserts/service23.jpg" alt="service21" class="m-auto d-block img-fluid"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="image-container overflow-hidden">
+                                <img src="asserts/service24.jpg" alt="service21" class="m-auto d-block img-fluid"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="master-team-section bg-dark py-4 py-lg-5">
+            <div class="container">
+                <div class="master-team-container">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="row">
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <div class="master-image-container position-relative">
+                                        <img src="asserts/meet-team1.jpg" alt="master team" class="m-auto d-flex img-fluid"/>
+                                        <div class="master-image-data">
+                                            <h4 class="text-center text-white">JESSICA ANTONY</h4>
+                                            <p>Costmetologist</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <div class="master-image-container position-relative">
+                                        <img src="asserts/meet-team2.jpg" alt="master team" class="m-auto d-flex img-fluid"/>
+                                        <div class="master-image-data">
+                                            <h4 class="text-center text-white">MADELEINE GOLDEN</h4>
+                                            <p>Costmetologist</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <div class="master-image-container position-relative">
+                                        <img src="asserts/meet-team3.jpg" alt="master team" class="m-auto d-flex img-fluid"/>
+                                        <div class="master-image-data">
+                                            <h4 class="text-center text-white">IRIS ELLIOTT</h4>
+                                            <p>Costmetologist</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <div class="master-image-container position-relative">
+                                        <img src="asserts/meet-team4.jpg" alt="master team" class="m-auto d-flex img-fluid"/>
+                                        <div class="master-image-data">
+                                            <h4 class="text-center text-white">JODY WHITEHEAD</h4>
+                                            <p>Costmetologist</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 text-center d-flex justify-content-center align-items-center">
+                            <div>
+                                <h3>MEET OUR MASTERS TEAM</h3>
+                                <div class="service-button-container border rounded m-auto p-1">
+                                    <a href="#" class="service-button d-block border text-white text-decoration-none py-1">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="special-offer-section bg-dark py-4 py-lg-5">
+            <div class="container">
+                <div class="special-offer-container py-lg-5">
+                    <div class="row">
+                        <div class="col-12 text-white card-top">
+                            <h2 class="text-center">SPECIAL OFFER</h2>
+                            <p class="offer-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div class="col-12 col-md-4 ">
+                            <div class="card-container">
+                                <div class="card card1 d-flex flex-column justify-content-center align-items-center rounded-0 border p">
+                                    <h3>WELLNESS</h3>
+                                    <p class="text-white"><span>16$</span>/Month</p>
+                                    <ul class="list-unstyled">
+                                        <li>Lorem ipsum dolor sit amet</li>
+                                        <li>Lorem ipsum dolor sit amet</li>
+                                        <li>Lorem ipsum dolor sit amet</li>
+                                    </ul>
+                                    <a href="#" >Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 ">
+                            <div class="card-container">
+                                <div class="card card1 card2 d-flex flex-column justify-content-center align-items-center rounded-0 border p">
+                                    <h3>WELLNESS</h3>
+                                    <p class="text-white"><span>16$</span>/Month</p>
+                                    <ul class="list-unstyled">
+                                        <li>Lorem ipsum dolor sit amet</li>
+                                        <li>Lorem ipsum dolor sit amet</li>
+                                        <li>Lorem ipsum dolor sit amet</li>
+                                    </ul>
+                                    <a href="#" >Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 ">
+                            <div class="card-container">
+                                <div class="card card1 d-flex flex-column justify-content-center align-items-center rounded-0 border p">
+                                    <h3>WELLNESS</h3>
+                                    <p class="text-white"><span>16$</span>/Month</p>
+                                    <ul class="list-unstyled">
+                                        <li>Lorem ipsum dolor sit amet</li>
+                                        <li>Lorem ipsum dolor sit amet</li>
+                                        <li>Lorem ipsum dolor sit amet</li>
+                                    </ul>
+                                    <a href="#" >Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-dark py-4">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <h3>YOUR QUESTIONS</h3>
+                            <div class="accordion text-white" id="accordionExample">
+                                <div class="accordion-item bg-transparent mb-4">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button bg-transparent text-white border" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            HOW CAN I SIGN UP FOR PROCEDURES?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item bg-transparent mb-4">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed bg-transparent text-white border" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            IS IT POSSIBLE TO YOU WITH COSMETICS?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item bg-transparent mb-4">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed bg-transparent text-white border" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            IS IT POSSIBLE TO YOU WITH CHILDREN?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item  bg-transparent mb-4">
+                                    <h2 class="accordion-header bg-transparent" id="headingFour">
+                                        <button class="accordion-button collapsed  bg-transparent text-white border" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            WHAT CANNOT BE PREGNANT?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse bg-transparent" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="image-container overflow-hidden">
+                                <img src="asserts/footer1.jpg" alt="footer" class="img-fluid d-block m-auto"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pt-5 mt-5">
+                        <p>© Copyright 2025 Mobirise - All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="script/script.js"></script>
+
+</body>
+</html>
